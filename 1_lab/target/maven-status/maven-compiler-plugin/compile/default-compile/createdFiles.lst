@@ -1,0 +1,4 @@
+org/rsatu/view/api/SingletonAPI.class
+org/rsatu/view/api/ReaderAPI.class
+org/rsatu/view/api/CreatorAPI.class
+org/rsatu/view/App.class
