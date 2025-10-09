@@ -5,19 +5,23 @@ import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
+import org.rsatu.view.App;
+
+import jakarta.ws.rs.POST;
+
 @Path("/reader")
 public class ReaderAPI {
 
     @GET
     @Path("/news/all")
     public Response getAllNews() {
-        return Response.ok().entity("All news").build();
+        return Response.ok().entity(App.newsContainer.getAllNews()).build();
     }
 
     @GET
     @Path("/news")
     public Response getAllNews(@QueryParam("id") int id) {
-        return Response.ok().entity("News with id: " + id).build();
+        return Response.ok().entity(App.newsContainer.getNews(id)).build();
     }
 
     @GET
