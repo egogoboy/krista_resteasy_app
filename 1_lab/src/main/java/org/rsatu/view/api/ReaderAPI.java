@@ -7,8 +7,6 @@ import javax.ws.rs.core.Response;
 
 import org.rsatu.view.App;
 
-import jakarta.ws.rs.POST;
-
 @Path("/reader")
 public class ReaderAPI {
 
@@ -20,7 +18,11 @@ public class ReaderAPI {
 
     @GET
     @Path("/news")
-    public Response getAllNews(@QueryParam("id") int id) {
+    public Response getNews(@QueryParam("id") int id) {
+        if (!App.newsContainer.isContain(id)) {
+            return Response.serverError().entity("News with id = " + id + " doesn't exist").build();
+        }
+
         return Response.ok().entity(App.newsContainer.getNews(id)).build();
     }
 

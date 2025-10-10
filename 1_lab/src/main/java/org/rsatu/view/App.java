@@ -12,7 +12,7 @@ public class App {
 
     public static void main(String[] args) {
         try {
-            Undertow.Builder builder = Undertow.builder().addHttpListener(8080, "localhost");
+            Undertow.Builder builder = Undertow.builder().addHttpListener(8080, "0.0.0.0");
             UndertowJaxrsServer server = new UndertowJaxrsServer().start(builder);
 
             server.deploy(SingletonAPI.class);
