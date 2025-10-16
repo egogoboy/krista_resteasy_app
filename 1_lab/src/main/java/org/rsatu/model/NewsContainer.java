@@ -4,41 +4,40 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import org.rsatu.view.api.dto.CreatorNewsDTO;
+import org.rsatu.view.api.dto.ReaderNewsDTO;
+
 public class NewsContainer {
 
-    private LinkedHashMap<Integer, String> news;
-    private int id_counter;
+    private LinkedHashMap<Long, ReaderNewsDTO> news;
+    private Long id_counter;
 
     public NewsContainer() {
         this.news = new LinkedHashMap<>();
-        id_counter = 1;
+        id_counter = 1l;
     }
 
-    public void addNews(String title) {
-        news.put(id_counter, title);
-        id_counter++;
+    public Long addNews(CreatorNewsDTO news_item) {
+        news.put(id_counter, new ReaderNewsDTO(id_counter, news_item));
+
+        return id_counter++;
     }
 
-    public String getAllNews() {
-        List<String> output_news = new ArrayList<>(this.news.values());
-        String output = "";
+    public List<ReaderNewsDTO> getAllNews() {
+        ArrayList<ReaderNewsDTO> output_news = new ArrayList<>(this.news.values());
 
-        for (String title : output_news) {
-            output = output + title + ", ";
-        }
-
-        return output;
+        return output_news;
     }
 
-    public String getNews(int id) {
+    public ReaderNewsDTO getNews(Long id) {
         if (news.get(id) == null) {
-            return "Unknown";
+            return new ReaderNewsDTO();
         }
 
         return news.get(id);
     }
 
-    public boolean isContain(int id) {
+    public boolean isContain(Long id) {
         return this.news.containsKey(id);
     }
 }

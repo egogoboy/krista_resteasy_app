@@ -1,5 +1,10 @@
+/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/model/CategoryContainer.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/model/NewsContainer.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/view/App.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/view/api/CreatorAPI.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/view/api/ReaderAPI.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/view/api/SingletonAPI.java
+/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/view/api/dto/CategoryDTO.java
+/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/view/api/dto/CreatorNewsDTO.java
+/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/view/api/dto/ReaderNewsDTO.java
+/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/view/api/dto/ReaderNewsListDTO.java
