@@ -1,22 +1,36 @@
 package org.rsatu.model;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.rsatu.view.api.dto.CategoryDTO;
-import org.rsatu.view.api.dto.CreatorNewsDTO;
-import org.rsatu.view.api.dto.ReaderNewsDTO;
+import org.rsatu.controller.categories.CategoryItemBO;
 
 public class CategoryContainer {
 
-    private ArrayList<CategoryDTO> category;
+    private HashMap<Long, CategoryItemBO> category;
+
+    private Long id_counter;
 
     public CategoryContainer() {
-        this.category = new ArrayList<>();
+        this.category = new HashMap<>();
+        this.id_counter = 1l;
     }
 
-    public void addCategory(CategoryDTO new_category) {
-        this.category.add(new_category);
+    public Long addCategory(CategoryItemBO new_category) {
+        this.category.put(id_counter, new_category);
+        return id_counter++;
+    }
+
+    public CategoryItemBO getCategory(Long id) {
+        return this.category.get(id);
+    }
+
+    public CategoryItemBO getCategory(String title) {
+        for (Map.Entry<Long, CategoryItemBO> entry : this.category.entrySet()) {
+            if (entry.getValue().getTitle().equals(title)) {
+                return new CategoryItemBO(entry.getKey(), entry.getValue().getTitle());
+            }
+        }
+        return null;
     }
 }

@@ -1,10 +1,14 @@
 org/rsatu/model/NewsContainer.class
-org/rsatu/view/api/dto/ReaderNewsListDTO.class
+org/rsatu/controller/categories/CategoryItemBO.class
 org/rsatu/view/api/SingletonAPI.class
-org/rsatu/view/api/ReaderAPI.class
-org/rsatu/view/api/dto/CreatorNewsDTO.class
 org/rsatu/view/api/CreatorAPI.class
+org/rsatu/controller/categories/CategoriesController.class
+org/rsatu/controller/news/NewsController.class
+org/rsatu/view/api/ReaderAPI.class
+org/rsatu/controller/news/NewsItemBO.class
+org/rsatu/view/api/dto/CreatorNewsDTO.class
 org/rsatu/view/App.class
 org/rsatu/view/api/dto/ReaderNewsDTO.class
+org/rsatu/controller/FacadeController.class
 org/rsatu/model/CategoryContainer.class
 org/rsatu/view/api/dto/CategoryDTO.class

@@ -2,8 +2,6 @@ package org.rsatu.controller.news;
 
 import java.util.Date;
 
-import org.rsatu.view.api.dto.CreatorNewsDTO;
-
 public class NewsItemBO {
     private Long id;
     private String title;
@@ -31,16 +29,6 @@ public class NewsItemBO {
         this.category = category;
         this.publish_date = publish_date;
         this.likes = likes;
-    }
-
-    public NewsItemBO(Long id, CreatorNewsDTO news) {
-        this.id = id;
-        this.title = news.getTitle();
-        this.text = news.getText();
-        // this.image = image;
-        this.category = news.getCategory().getName();
-        // this.publish_date = publish_date;
-        this.likes = 0;
     }
 
     public void increaseLikes(Integer count) {

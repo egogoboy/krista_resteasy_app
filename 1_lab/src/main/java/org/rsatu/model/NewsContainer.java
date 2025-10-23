@@ -5,6 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 import org.rsatu.controller.news.NewsItemBO;
+import org.rsatu.view.App;
 
 public class NewsContainer {
 
@@ -17,6 +18,10 @@ public class NewsContainer {
     }
 
     public Long addNews(NewsItemBO news_item) {
+        if (App.categoryContainer.getCategory(news_item.getCategory()) == null) {
+            System.out.println("[DEBUG] category " + news_item.getCategory() + " doesn't exist");
+            return 0l;
+        }
         news_item.setId(id_counter);
         news.put(id_counter, news_item);
 

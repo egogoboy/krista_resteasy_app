@@ -6,7 +6,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.rsatu.view.App;
+import org.rsatu.view.api.dto.CategoryDTO;
 import org.rsatu.view.api.dto.CreatorNewsDTO;
+import org.rsatu.view.api.dto.ReaderNewsDTO;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -19,6 +21,18 @@ public class CreatorAPI {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response createNews(CreatorNewsDTO news) {
-        return Response.ok().entity(App.facadeController.addNews(news)).build();
+        ReaderNewsDTO result = App.facadeController.addNews(news);
+        if (result == null) {
+            return Response.status(500).entity("Error while adding news").build();
+        }
+        return Response.ok().entity(result).build();
+    }
+
+    @POST
+    @Path("/categories/create")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response createCategory(CategoryDTO category) {
+        return Response.ok().entity(App.facadeController.addCategory(category)).build();
     }
 }

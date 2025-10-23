@@ -3,6 +3,9 @@ package org.rsatu.view.api.dto;
 public class CategoryDTO {
     private String name;
 
+    public CategoryDTO() {
+    }
+
     public CategoryDTO(String name) {
         this.name = name;
     }

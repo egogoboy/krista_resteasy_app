@@ -7,8 +7,8 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.rsatu.controller.FacadeController;
 import org.rsatu.view.App;
+import org.rsatu.view.api.dto.CategoryDTO;
 import org.rsatu.view.api.dto.ReaderNewsDTO;
 
 @Path("/reader")
@@ -19,14 +19,13 @@ public class ReaderAPI {
     @Path("/news/all")
     public Response getAllNews() {
         return Response.ok().entity(App.facadeController.getAllNews()).build();
-
     }
 
     @GET
     @Path("/news/sorted")
     public Response getSortedNews(@QueryParam("category") String category) {
         return Response.ok()
-                .entity(App.facadeController.getFilteredNews(category))
+                .entity(App.facadeController.getFilteredNews(new CategoryDTO(category)))
                 .build();
     }
 
