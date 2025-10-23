@@ -1,6 +1,7 @@
 package org.rsatu.view;
 
 import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
+import org.rsatu.controller.FacadeController;
 import org.rsatu.model.NewsContainer;
 import org.rsatu.view.api.SingletonAPI;
 
@@ -9,6 +10,7 @@ import io.undertow.Undertow;
 public class App {
 
     public static NewsContainer newsContainer = new NewsContainer();
+    public static FacadeController facadeController = new FacadeController();
 
     public static void main(String[] args) {
         try {

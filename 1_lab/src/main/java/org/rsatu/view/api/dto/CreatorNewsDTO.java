@@ -1,5 +1,7 @@
 package org.rsatu.view.api.dto;
 
+import org.rsatu.controller.news.NewsItemBO;
+
 public class CreatorNewsDTO {
     private String title;
     private String description;
@@ -18,6 +20,12 @@ public class CreatorNewsDTO {
         this.description = news.description;
         this.text = news.text;
         this.category = news.category;
+    }
+
+    public CreatorNewsDTO(NewsItemBO news) {
+        this.title = news.getTitle();
+        this.text = news.getText();
+        this.category = new CategoryDTO(news.getCategory());
     }
 
     public CreatorNewsDTO() {

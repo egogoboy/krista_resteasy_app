@@ -2,14 +2,11 @@ package org.rsatu.view.api;
 
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.rsatu.view.App;
-import org.rsatu.view.api.dto.CategoryDTO;
 import org.rsatu.view.api.dto.CreatorNewsDTO;
-import org.rsatu.view.api.dto.ReaderNewsDTO;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -22,23 +19,6 @@ public class CreatorAPI {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response createNews(CreatorNewsDTO news) {
-        Long id = App.newsContainer.addNews(news);
-
-        return Response.ok().entity(App.newsContainer.getNews(id)).build();
+        return Response.ok().entity(App.facadeController.addNews(news)).build();
     }
-
-    /*
-     * @POST
-     * 
-     * @Path("/category/create")
-     * 
-     * @Consumes(MediaType.APPLICATION_JSON)
-     * 
-     * @Produces(MediaType.APPLICATION_JSON)
-     * public Response createCategory(CategoryDTO category) {
-     * 
-     * return Response.ok().entity(news).build();
-     * // return Response.ok().entity(App.newsContainer.getNews(id)).build();
-     * }
-     */
 }

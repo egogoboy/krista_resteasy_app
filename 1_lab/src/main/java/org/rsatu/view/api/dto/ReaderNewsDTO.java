@@ -1,5 +1,7 @@
 package org.rsatu.view.api.dto;
 
+import org.rsatu.controller.news.NewsItemBO;
+
 public class ReaderNewsDTO extends CreatorNewsDTO {
     private Long id;
 
@@ -11,6 +13,11 @@ public class ReaderNewsDTO extends CreatorNewsDTO {
     public ReaderNewsDTO(Long id, CreatorNewsDTO creator_news) {
         super(creator_news);
         this.id = id;
+    }
+
+    public ReaderNewsDTO(NewsItemBO news) {
+        super(news);
+        this.id = news.getId();
     }
 
     public ReaderNewsDTO() {
