@@ -56,14 +56,4 @@ public class ReaderAPI {
 
         return Response.ok().entity(returnDto).build();
     }
-
-    @GET
-    @Path("/like")
-    public Response likeNews(@QueryParam("id") int id, @QueryParam("rate") int rate) {
-        if (rate < 0 || rate > 10) {
-            return Response.serverError().entity("Invalid rate").build();
-        }
-
-        return Response.ok().entity("Rated news " + id + ". Rate: " + rate).build();
-    }
 }
