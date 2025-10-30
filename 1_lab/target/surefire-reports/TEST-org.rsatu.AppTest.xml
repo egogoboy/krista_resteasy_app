@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.rsatu.AppTest" time="0.02" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.rsatu.AppTest" time="0.017" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,8 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/24.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/target/surefire/surefirebooter-20251023132734936_3.jar /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/target/surefire 2025-10-23T13-27-34_894-jvmRun1 surefire-20251023132734936_1tmp surefire_0-20251023132734936_2tmp"/>
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.java.command" value="/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/target/surefire/surefirebooter-20251030140725839_3.jar /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/target/surefire 2025-10-30T14-07-25_790-jvmRun1 surefire-20251030140725839_1tmp surefire_0-20251030140725839_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/target/test-classes:/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/target/classes:/Users/egorsudakov/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/Users/egorsudakov/.m2/repository/org/jboss/resteasy/resteasy-jaxrs/4.0.0.Beta5/resteasy-jaxrs-4.0.0.Beta5.jar:/Users/egorsudakov/.m2/repository/org/jboss/spec/javax/ws/rs/jboss-jaxrs-api_2.1_spec/1.0.1.Final/jboss-jaxrs-api_2.1_spec-1.0.1.Final.jar:/Users/egorsudakov/.m2/repository/org/jboss/spec/javax/xml/bind/jboss-jaxb-api_2.3_spec/1.0.0.Final/jboss-jaxb-api_2.3_spec-1.0.0.Final.jar:/Users/egorsudakov/.m2/repository/org/jboss/resteasy/resteasy-jaxrs-services/4.0.0.Beta5/resteasy-jaxrs-services-4.0.0.Beta5.jar:/Users/egorsudakov/.m2/repository/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.jar:/Users/egorsudakov/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/Users/egorsudakov/.m2/repository/org/jboss/spec/javax/annotation/jboss-annotations-api_1.2_spec/1.0.0.Final/jboss-annotations-api_1.2_spec-1.0.0.Final.jar:/Users/egorsudakov/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/Users/egorsudakov/.m2/repository/org/apache/httpcomponents/httpclient/4.5.4/httpclient-4.5.4.jar:/Users/egorsudakov/.m2/repository/org/apache/httpcomponents/httpcore/4.4.7/httpcore-4.4.7.jar:/Users/egorsudakov/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/egorsudakov/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/Users/egorsudakov/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar:/Users/egorsudakov/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/Users/egorsudakov/.m2/repository/javax/json/bind/javax.json.bind-api/1.0/javax.json.bind-api-1.0.jar:/Users/egorsudakov/.m2/repository/org/jboss/logging/jboss-logging/3.3.1.Final/jboss-logging-3.3.1.Final.jar:/Users/egorsudakov/.m2/repository/org/jboss/resteasy/resteasy-jaxb-provider/4.0.0.Beta5/resteasy-jaxb-provider-4.0.0.Beta5.jar:/Users/egorsudakov/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar:/Users/egorsudakov/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar:/Users/egorsudakov/.m2/repository/org/jboss/resteasy/resteasy-jackson-provider/4.0.0.Beta5/resteasy-jackson-provider-4.0.0.Beta5.jar:/Users/egorsudakov/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/Users/egorsudakov/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar:/Users/egorsudakov/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar:/Users/egorsudakov/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar:/Users/egorsudakov/.m2/repository/org/jboss/resteasy/resteasy-servlet-initializer/4.0.0.Beta5/resteasy-servlet-initializer-4.0.0.Beta5.jar:/Users/egorsudakov/.m2/repository/org/jboss/resteasy/resteasy-undertow/4.0.0.Beta5/resteasy-undertow-4.0.0.Beta5.jar:/Users/egorsudakov/.m2/repository/io/undertow/undertow-servlet/1.4.18.Final/undertow-servlet-1.4.18.Final.jar:/Users/egorsudakov/.m2/repository/org/jboss/spec/javax/servlet/jboss-servlet-api_3.1_spec/1.0.0.Final/jboss-servlet-api_3.1_spec-1.0.0.Final.jar:/Users/egorsudakov/.m2/repository/io/undertow/undertow-core/2.2.28.Final/undertow-core-2.2.28.Final.jar:/Users/egorsudakov/.m2/repository/org/jboss/xnio/xnio-api/3.8.7.Final/xnio-api-3.8.7.Final.jar:/Users/egorsudakov/.m2/repository/org/wildfly/common/wildfly-common/1.5.4.Final/wildfly-common-1.5.4.Final.jar:/Users/egorsudakov/.m2/repository/org/wildfly/client/wildfly-client-config/1.0.1.Final/wildfly-client-config-1.0.1.Final.jar:/Users/egorsudakov/.m2/repository/org/jboss/xnio/xnio-nio/3.8.7.Final/xnio-nio-3.8.7.Final.jar:/Users/egorsudakov/.m2/repository/org/jboss/threads/jboss-threads/3.1.0.Final/jboss-threads-3.1.0.Final.jar:/Users/egorsudakov/.m2/repository/org/jboss/resteasy/resteasy-client/4.0.0.Beta5/resteasy-client-4.0.0.Beta5.jar:/Users/egorsudakov/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar:/Users/egorsudakov/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -26,12 +25,11 @@
     <property name="basedir" value="/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/target/surefire/surefirebooter-20251023132734936_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/target/surefire/surefirebooter-20251030140725839_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="24.0.2"/>
     <property name="user.name" value="egorsudakov"/>
     <property name="stdout.encoding" value="UTF-8"/>
@@ -55,8 +53,7 @@
     <property name="java.vendor" value="Homebrew"/>
     <property name="java.vm.version" value="24.0.2"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testApp" classname="org.rsatu.AppTest" time="0.003"/>
+  <testcase name="testApp" classname="org.rsatu.AppTest" time="0.001"/>
 </testsuite>

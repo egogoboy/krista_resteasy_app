@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import org.rsatu.view.App;
 
-public class NewsController {
+public class NewsController implements NewsInterface {
     public NewsController() {
     }
 

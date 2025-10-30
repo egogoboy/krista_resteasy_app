@@ -6,25 +6,25 @@ import java.util.List;
 import org.rsatu.controller.categories.CategoriesController;
 import org.rsatu.controller.categories.CategoryItemBO;
 import org.rsatu.controller.news.NewsController;
+import org.rsatu.controller.news.NewsInterface;
 import org.rsatu.controller.news.NewsItemBO;
+import org.rsatu.controller.news.decor.PositiveNewsDecorator;
 import org.rsatu.view.api.dto.*;
 
 public class FacadeController {
 
-    private NewsController newsController;
+    private NewsInterface newsController;
     private CategoriesController categoriesController;
-
-    private List<ReaderNewsDTO> NewsBOListParser(List<NewsItemBO> news) {
-        List<ReaderNewsDTO> result = new ArrayList<>();
-        for (NewsItemBO item : news) {
-            result.add(NewsBOtoDTO(item));
-        }
-
-        return result;
-    }
+    private boolean autumn;
 
     public FacadeController() {
-        this.newsController = new NewsController();
+        this.autumn = true;
+        if (this.autumn) {
+            this.newsController = new PositiveNewsDecorator(new NewsController());
+        } else {
+            this.newsController = new NewsController();
+        }
+
         this.categoriesController = new CategoriesController();
     }
 
@@ -87,4 +87,12 @@ public class FacadeController {
         return new CategoryItemBO(0l, category.getName());
     }
 
+    private List<ReaderNewsDTO> NewsBOListParser(List<NewsItemBO> news) {
+        List<ReaderNewsDTO> result = new ArrayList<>();
+        for (NewsItemBO item : news) {
+            result.add(NewsBOtoDTO(item));
+        }
+
+        return result;
+    }
 }

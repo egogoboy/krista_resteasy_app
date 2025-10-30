@@ -2,7 +2,10 @@
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/controller/categories/CategoriesController.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/controller/categories/CategoryItemBO.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/controller/news/NewsController.java
+/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/controller/news/NewsInterface.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/controller/news/NewsItemBO.java
+/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/controller/news/decor/NewsDecorator.java
+/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/controller/news/decor/PositiveNewsDecorator.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/model/CategoryContainer.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/model/NewsContainer.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/view/App.java
