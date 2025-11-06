@@ -1,5 +1,6 @@
 package org.rsatu.controller.news;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -10,18 +11,24 @@ public class NewsController implements NewsInterface {
     }
 
     public List<NewsItemBO> getAllNews() {
-        return App.newsContainer.getAllNews();
+        List<NewsItemBO> news = App.newsDAO.getAllNews();
+        if (news == null) {
+            return new ArrayList<NewsItemBO>();
+        }
+
+        return news;
     }
 
     public List<NewsItemBO> getFilteredNews(String category) {
-        return getAllNews().stream().filter(news -> news.getCategory().equals(category)).collect(Collectors.toList());
+        return getAllNews().stream().filter(news -> news.getCategory().getTitle().equals(category))
+                .collect(Collectors.toList());
     }
 
     public NewsItemBO getCurrentNews(Long id) {
-        return App.newsContainer.getNews(id);
+        return App.newsDAO.getCurrentNews(id);
     }
 
-    public Long addNews(NewsItemBO news) {
-        return App.newsContainer.addNews(news);
+    public NewsItemBO addNews(NewsItemBO news) {
+        return App.newsDAO.addNews(news);
     }
 }

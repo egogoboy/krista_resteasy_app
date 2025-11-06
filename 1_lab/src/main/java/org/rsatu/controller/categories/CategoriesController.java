@@ -7,9 +7,7 @@ public class CategoriesController {
     }
 
     public CategoryItemBO addCategory(CategoryItemBO category) {
-        Long id = App.categoryContainer.addCategory(category);
-
-        return App.categoryContainer.getCategory(id);
+        return App.categoryDAO.addCategory(category);
     }
 
     public CategoryItemBO getCategory(CategoryItemBO category) {

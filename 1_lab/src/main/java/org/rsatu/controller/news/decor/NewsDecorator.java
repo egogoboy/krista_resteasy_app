@@ -28,7 +28,7 @@ public abstract class NewsDecorator implements NewsInterface {
     }
 
     @Override
-    public Long addNews(NewsItemBO news) {
+    public NewsItemBO addNews(NewsItemBO news) {
         return newsController.addNews(news);
     }
 

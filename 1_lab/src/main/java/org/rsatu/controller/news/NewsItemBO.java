@@ -2,12 +2,14 @@ package org.rsatu.controller.news;
 
 import java.util.Date;
 
+import org.rsatu.controller.categories.CategoryItemBO;
+
 public class NewsItemBO {
     private Long id;
     private String title;
     private String text;
     private String image;
-    private String category;
+    private CategoryItemBO category;
     private Date publish_date;
     private Integer likes;
 
@@ -19,7 +21,7 @@ public class NewsItemBO {
             String title,
             String text,
             String image,
-            String category,
+            CategoryItemBO category,
             Date publish_date,
             Integer likes) {
         this.id = id;
@@ -29,6 +31,20 @@ public class NewsItemBO {
         this.category = category;
         this.publish_date = publish_date;
         this.likes = likes;
+    }
+
+    public NewsItemBO(
+            Long id,
+            String title,
+            String text,
+            CategoryItemBO category) {
+        this.id = id;
+        this.title = title;
+        this.text = text;
+        this.image = "";
+        this.category = category;
+        this.publish_date = null;
+        this.likes = 0;
     }
 
     public void increaseLikes(Integer count) {
@@ -51,7 +67,7 @@ public class NewsItemBO {
         this.image = new_image;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(CategoryItemBO category) {
         this.category = category;
     }
 
@@ -79,7 +95,7 @@ public class NewsItemBO {
         return this.image;
     }
 
-    public String getCategory() {
+    public CategoryItemBO getCategory() {
         return this.category;
     }
 

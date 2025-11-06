@@ -10,5 +10,5 @@ public interface NewsInterface {
 
     public NewsItemBO getCurrentNews(Long id);
 
-    public Long addNews(NewsItemBO news);
+    public NewsItemBO addNews(NewsItemBO news);
 }

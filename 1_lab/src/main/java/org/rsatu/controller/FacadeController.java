@@ -41,9 +41,7 @@ public class FacadeController {
     }
 
     public ReaderNewsDTO addNews(CreatorNewsDTO news) {
-        Long id = newsController.addNews(NewsDTOtoBO(news));
-
-        return NewsBOtoDTO(newsController.getCurrentNews(id));
+        return NewsBOtoDTO(newsController.addNews(NewsDTOtoBO(news)));
     }
 
     public CategoryDTO addCategory(CategoryDTO category) {
@@ -60,27 +58,33 @@ public class FacadeController {
         }
 
         ReaderNewsDTO result = new ReaderNewsDTO();
+        CategoryItemBO news_category = news.getCategory();
 
         result.setId(news.getId());
         result.setText(news.getText());
         result.setTitle(news.getTitle());
-        result.setCategory(new CategoryDTO(news.getCategory()));
+        result.setCategory(
+                new CategoryDTO(news_category.getId(), news_category.getTitle()));
 
         return result;
     }
 
     private NewsItemBO NewsDTOtoBO(CreatorNewsDTO news) {
         NewsItemBO result = new NewsItemBO();
+        CategoryDTO news_category = news.getCategory();
 
         result.setTitle(news.getTitle());
-        result.setCategory(news.getCategory().getName());
+        result.setCategory(new CategoryItemBO(news_category.getId(), news_category.getName()));
         result.setText(news.getText());
 
         return result;
     }
 
     private CategoryDTO CategoryBOToDTO(CategoryItemBO category) {
-        return new CategoryDTO(category.getTitle());
+        if (category == null) {
+            return new CategoryDTO(-1l, "null");
+        }
+        return new CategoryDTO(category.getId(), category.getTitle());
     }
 
     private CategoryItemBO CategoryDTOToBO(CategoryDTO category) {
@@ -88,6 +92,10 @@ public class FacadeController {
     }
 
     private List<ReaderNewsDTO> NewsBOListParser(List<NewsItemBO> news) {
+        if (news == null) {
+            return null;
+        }
+
         List<ReaderNewsDTO> result = new ArrayList<>();
         for (NewsItemBO item : news) {
             result.add(NewsBOtoDTO(item));

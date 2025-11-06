@@ -6,7 +6,10 @@
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/controller/news/NewsItemBO.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/controller/news/decor/NewsDecorator.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/controller/news/decor/PositiveNewsDecorator.java
+/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/db/Database.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/model/CategoryContainer.java
+/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/model/DAO/CategoryDAO.java
+/Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/model/DAO/NewsDAO.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/model/NewsContainer.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/view/App.java
 /Users/egorsudakov/Documents/rsatu/5th_semester/software_arch/java_labs/1_lab/src/main/java/org/rsatu/view/api/CreatorAPI.java

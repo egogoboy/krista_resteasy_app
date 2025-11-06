@@ -17,16 +17,19 @@ public class NewsContainer {
         id_counter = 1l;
     }
 
-    public Long addNews(NewsItemBO news_item) {
-        if (App.categoryContainer.getCategory(news_item.getCategory()) == null) {
-            System.out.println("[DEBUG] category " + news_item.getCategory() + " doesn't exist");
-            return 0l;
-        }
-        news_item.setId(id_counter);
-        news.put(id_counter, news_item);
-
-        return id_counter++;
-    }
+    /*
+     * public Long addNews(NewsItemBO news_item) {
+     * if (App.categoryContainer.getCategory(news_item.getCategory()) == null) {
+     * System.out.println("[DEBUG] category " + news_item.getCategory() +
+     * " doesn't exist");
+     * return 0l;
+     * }
+     * news_item.setId(id_counter);
+     * news.put(id_counter, news_item);
+     * 
+     * return id_counter++;
+     * }
+     */
 
     public List<NewsItemBO> getAllNews() {
         ArrayList<NewsItemBO> output_news = new ArrayList<>(this.news.values());
